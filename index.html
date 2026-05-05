@@ -3,50 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>景點地圖 Dashboard</title>
+    <title>🏔️ 北台灣自然景點地圖</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         :root {
-            --bg-color: #1a1a1a;
-            --sidebar-bg: #252525;
-            --text-color: #e0e0e0;
-            --accent-color: #e94560;
-            --card-bg: #333;
+            --bg: #0f0f12;
+            --sidebar-bg: #18181b;
+            --card-bg: #1f1f24;
+            --card-hover: #2a2a30;
+            --text: #e4e4e7;
+            --text-dim: #a1a1aa;
+            --accent: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.3);
+            --border: #27272a;
         }
-        body, html { margin: 0; padding: 0; height: 100%; width: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg-color); color: var(--text-color); overflow: hidden; }
+
+        body, html {
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg); color: var(--text); overflow: hidden;
+        }
+
         #container { display: flex; height: 100vh; width: 100vw; }
-        #sidebar { width: 350px; background: var(--sidebar-bg); display: flex; flex-direction: column; border-right: 1px solid #444; z-index: 1000; }
-        #map { flex-grow: 1; }
-        
-        .sidebar-header { padding: 20px; border-bottom: 1px solid #444; }
-        .sidebar-header h2 { margin: 0 0 15px 0; font-size: 1.5rem; color: var(--accent-color); }
-        .controls { display: flex; flex-direction: column; gap: 10px; }
-        input, select { 
-            padding: 8px; border-radius: 4px; border: 1px solid #444; background: #111; color: white; width: 100%; box-sizing: border-box;
-        }
-        
-        #spot-list { flex-grow: 1; overflow-y: auto; padding: 10px; }
-        .spot-card { 
-            background: var(--card-bg); padding: 15px; border-radius: 8px; margin-bottom: 12px; cursor: pointer; transition: transform 0.2s; 
-            border-left: 4px solid var(--accent-color);
-        }
-        .spot-card:hover { transform: translateX(5px); background: #444; }
-        .spot-card h3 { margin: 0 0 5px 0; font-size: 1.1rem; }
-        .spot-card .info { font-size: 0.85rem; color: #bbb; line-height: 1.4; }
-        .spot-card .meta { margin-top: 8px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center; }
-        .nav-link { color: #4ecdc4; text-decoration: none; font-weight: bold; }
 
-        .leaflet-popup-content-wrapper { background: var(--card-bg); color: var(--text-color); border-radius: 8px; }
+        #sidebar {
+            width: 380px; background: var(--sidebar-bg); display: flex; flex-direction: column;
+            border-right: 1px solid var(--border); z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 20px; border-bottom: 1px solid var(--border);
+        }
+        .sidebar-header h2 {
+            margin: 0 0 4px 0; font-size: 1.4rem;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .sidebar-header .subtitle {
+            font-size: 0.8rem; color: var(--text-dim); margin-bottom: 14px;
+        }
+        .controls { display: flex; flex-direction: column; gap: 8px; }
+        .controls input, .controls select {
+            padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
+            background: #111; color: var(--text); width: 100%;
+            font-size: 0.85rem; outline: none; transition: border-color 0.2s;
+        }
+        .controls input:focus, .controls select:focus {
+            border-color: var(--accent);
+        }
+
+        #spot-list {
+            flex: 1; overflow-y: auto; padding: 12px;
+        }
+        #spot-list::-webkit-scrollbar { width: 4px; }
+        #spot-list::-webkit-scrollbar-track { background: transparent; }
+        #spot-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .spot-card {
+            background: var(--card-bg); border-radius: 12px; margin-bottom: 12px;
+            cursor: pointer; overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.25s ease;
+        }
+        .spot-card:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .spot-card-img {
+            width: 100%; height: 140px; object-fit: cover;
+            display: block; background: #222;
+        }
+        .spot-card-img-placeholder {
+            width: 100%; height: 140px;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            font-size: 2.5rem;
+        }
+
+        .spot-card-body { padding: 14px; }
+        .spot-card-body h3 {
+            margin: 0 0 4px 0; font-size: 1.05rem; font-weight: 600;
+        }
+        .spot-card-body .sub {
+            font-size: 0.8rem; color: var(--text-dim); line-height: 1.5;
+        }
+        .spot-card-body .desc {
+            font-size: 0.85rem; color: var(--text); line-height: 1.4;
+            margin-top: 6px;
+        }
+        .spot-card-body .meta {
+            margin-top: 10px; display: flex; justify-content: space-between;
+            align-items: center; font-size: 0.75rem; color: var(--text-dim);
+        }
+        .meta .tag {
+            display: inline-block; padding: 2px 8px; border-radius: 4px;
+            background: rgba(16, 185, 129, 0.15); color: #34d399; font-size: 0.7rem;
+        }
+        .nav-link {
+            color: var(--accent); text-decoration: none; font-weight: 500;
+            font-size: 0.75rem;
+        }
+        .nav-link:hover { text-decoration: underline; }
+
+        /* Map */
+        #map { flex: 1; }
+
+        /* Leaflet overrides */
+        .leaflet-popup-content-wrapper {
+            background: var(--card-bg); color: var(--text);
+            border-radius: 12px; border: 1px solid var(--border);
+            padding: 0; overflow: hidden;
+        }
+        .leaflet-popup-content {
+            margin: 0; width: 280px !important;
+        }
         .leaflet-popup-tip { background: var(--card-bg); }
-        .popup-content { max-width: 200px; }
-        .popup-content h3 { margin: 0 0 5px 0; color: var(--accent-color); }
-        .popup-content p { margin: 5px 0; font-size: 0.9rem; }
-        .popup-content .meta { font-size: 0.8rem; color: #aaa; border-top: 1px solid #444; padding-top: 5px; margin-top: 5px; }
 
-        /* Custom Marker Style */
+        .popup-img {
+            width: 100%; height: 160px; object-fit: cover; display: block;
+        }
+        .popup-img-placeholder {
+            width: 100%; height: 160px;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            font-size: 3rem;
+        }
+        .popup-body { padding: 16px; }
+        .popup-body h3 {
+            margin: 0 0 6px 0; font-size: 1.1rem;
+            color: var(--accent);
+        }
+        .popup-body p {
+            margin: 4px 0; font-size: 0.85rem; color: var(--text-dim);
+            line-height: 1.5;
+        }
+        .popup-body .desc { color: var(--text); font-size: 0.9rem; }
+        .popup-footer {
+            padding: 12px 16px; border-top: 1px solid var(--border);
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.75rem; color: var(--text-dim);
+        }
+        .popup-footer a {
+            color: var(--accent); text-decoration: none; font-weight: 500;
+        }
+
         .custom-marker {
             display: flex; align-items: center; justify-content: center;
-            font-size: 24px; text-shadow: 0 0 3px rgba(0,0,0,0.8);
+            font-size: 26px; filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+            transition: transform 0.2s;
+        }
+
+        /* Stats bar */
+        #sidebar-stats {
+            padding: 0 20px 12px;
+            font-size: 0.75rem; color: var(--text-dim);
+            border-bottom: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            #sidebar { width: 100%; height: 45vh; }
+            #container { flex-direction: column-reverse; }
+            #map { height: 55vh; }
         }
     </style>
 </head>
@@ -55,15 +176,16 @@
 <div id="container">
     <div id="sidebar">
         <div class="sidebar-header">
-                <h2>🏔️ 新景點地圖</h2>
-            <p style="margin:0;font-size:0.85rem;color:#999" id="sidebar-stats"></p>
+            <h2>🏔️ 北台灣自然景點</h2>
+            <div class="subtitle">山岳・瀑布・步道・海岸・森林</div>
             <div class="controls">
-                <input type="text" id="search-input" placeholder="搜尋景點名稱...">
+                <input type="text" id="search-input" placeholder="🔍 搜尋景點名稱...">
                 <select id="city-filter">
-                    <option value="">全部城市</option>
+                    <option value="">🌏 全部地區</option>
                 </select>
             </div>
         </div>
+        <div id="sidebar-stats"></div>
         <div id="spot-list"></div>
     </div>
     <div id="map"></div>
@@ -72,13 +194,12 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
     let map, markers = [], spots = [];
-    const colors = ['#e94560', '#f5a623', '#4ecdc4', '#6c5ce7', '#2ecc71', '#e67e22', '#3498db'];
+    const colors = ['#10b981', '#34d399', '#6ee7b7', '#a7f3d0', '#059669'];
 
     async function init() {
-        // Initialize Map
-        map = L.map('map').setView([25, 121], 7);
+        map = L.map('map').setView([24.8, 121.4], 8);
         L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
         }).addTo(map);
 
         try {
@@ -93,14 +214,12 @@
         renderMarkers(spots);
         renderList(spots);
         updateStats(spots);
-        
-        // Initial fitBounds
+
         if (spots.length > 0) {
             const bounds = L.latLngBounds(spots.map(s => [s.lat, s.lng]));
             map.fitBounds(bounds, { padding: [50, 50] });
         }
 
-        // Events
         document.getElementById('search-input').addEventListener('input', filterSpots);
         document.getElementById('city-filter').addEventListener('change', filterSpots);
     }
@@ -116,36 +235,48 @@
         });
     }
 
+    function spotIcon(name) {
+        const hasWaterfall = name.includes('瀑布');
+        const isCoastal = name.includes('海') || name.includes('濕地') || name.includes('角') || name.includes('鼻頭');
+        const isLake = name.includes('湖') || name.includes('池');
+        const isMountain = name.includes('山') || name.includes('峰') || name.includes('嶺');
+        const icon = isWaterfall ? '💧' : isLake ? '🏞️' : isCoastal ? '🌊' : '🏔️';
+        return L.divIcon({
+            className: 'custom-marker',
+            html: `<span>${icon}</span>`,
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+    }
+
     function renderMarkers(data) {
         markers.forEach(m => map.removeLayer(m));
         markers = [];
 
         data.forEach((spot, index) => {
-            const color = colors[index % colors.length];
-            const icon = L.divIcon({
-                className: 'custom-marker',
-                html: `<span style="color: ${color}">🏔️</span>`,
-                iconSize: [30, 30],
-                iconAnchor: [15, 15]
-            });
-
+            const icon = spotIcon(spot.name);
             const marker = L.marker([spot.lat, spot.lng], { icon }).addTo(map);
-            
+
+            const imgHtml = spot.image
+                ? `<img class="popup-img" src="${spot.image}" alt="${spot.name}" loading="lazy">`
+                : `<div class="popup-img-placeholder">🏔️</div>`;
+
             const popupHtml = `
-                <div class="popup-content">
+                ${imgHtml}
+                <div class="popup-body">
                     <h3>${spot.name}</h3>
-                    <p>${spot.address}</p>
+                    <p class="desc">${spot.description}</p>
+                    <p>📍 ${spot.address}</p>
                     <p>📅 ${spot.year}</p>
-                    <p>${spot.description}</p>
-                    <div class="meta">
-                        <span>📍 ${spot.source}</span>
-                        <a href="https://www.google.com/maps/search/?api=1&query=${spot.lat},${spot.lng}" target="_blank" style="color:#4ecdc4">🗺️ 導航</a>
-                    </div>
+                </div>
+                <div class="popup-footer">
+                    <span>📰 ${spot.source}</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=${spot.lat},${spot.lng}" target="_blank">🗺️ 導航</a>
                 </div>
             `;
-            marker.bindPopup(popupHtml);
+            marker.bindPopup(popupHtml, { maxWidth: 300, className: '' });
             marker.on('click', () => {
-                map.setView([spot.lat, spot.lng], 15);
+                map.setView([spot.lat, spot.lng], 14);
                 marker.openPopup();
             });
             markers.push(marker);
@@ -156,21 +287,29 @@
     function renderList(data) {
         const list = document.getElementById('spot-list');
         list.innerHTML = '';
-        
+
         data.forEach(spot => {
             const card = document.createElement('div');
             card.className = 'spot-card';
-            card.style.borderLeftColor = colors[spots.indexOf(spot) % colors.length];
+
+            const imgHtml = spot.image
+                ? `<img class="spot-card-img" src="${spot.image}" alt="${spot.name}" loading="lazy">`
+                : `<div class="spot-card-img-placeholder">🏔️</div>`;
+
             card.innerHTML = `
-                <h3>${spot.name}</h3>
-                <div class="info">${spot.city} | ${spot.year}</div>
-                <div class="meta">
-                    <span>📍 ${spot.address}</span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=${spot.lat},${spot.lng}" target="_blank" class="nav-link">🗺️ 導航</a>
+                ${imgHtml}
+                <div class="spot-card-body">
+                    <h3>${spot.name}</h3>
+                    <div class="sub">${spot.city} · ${spot.year}</div>
+                    <div class="desc">${spot.description}</div>
+                    <div class="meta">
+                        <span class="tag">${spot.city}</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=${spot.lat},${spot.lng}" target="_blank" class="nav-link">🗺️ 導航</a>
+                    </div>
                 </div>
             `;
             card.onclick = () => {
-                map.setView([spot.lat, spot.lng], 15);
+                map.setView([spot.lat, spot.lng], 14);
                 spot.leafletMarker.openPopup();
             };
             list.appendChild(card);
@@ -182,9 +321,9 @@
         const cityTerm = document.getElementById('city-filter').value;
 
         const filtered = spots.filter(s => {
-            const matchesSearch = s.name.toLowerCase().includes(searchTerm) || s.address.toLowerCase().includes(searchTerm);
-            const matchesCity = cityTerm === "" || s.city === cityTerm;
-            return matchesSearch && matchesCity;
+            const matchSearch = s.name.toLowerCase().includes(searchTerm) || s.address.toLowerCase().includes(searchTerm);
+            const matchCity = cityTerm === "" || s.city === cityTerm;
+            return matchSearch && matchCity;
         });
 
         renderMarkers(filtered);
@@ -194,7 +333,8 @@
 
     function updateStats(data) {
         const cities = [...new Set(data.map(s => s.city))].sort();
-        document.getElementById('sidebar-stats').textContent = `${data.length} 個景點 · ${cities.length} 縣市`;
+        document.getElementById('sidebar-stats').textContent =
+            `🌲 ${data.length} 個自然景點 · ${cities.length} 縣市`;
     }
 
     init();
