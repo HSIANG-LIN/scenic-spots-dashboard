@@ -255,15 +255,27 @@
         });
     }
 
-    function spotIcon(name) {
-        const hasWaterfall = name.includes('瀑布');
-        const isCoastal = name.includes('海') || name.includes('濕地') || name.includes('角') || name.includes('鼻頭');
-        const isLake = name.includes('湖') || name.includes('池');
-        const isMountain = name.includes('山') || name.includes('峰') || name.includes('嶺');
-        const icon = hasWaterfall ? '💧' : isLake ? '🏞️' : isCoastal ? '🌊' : '🏔️';
+    function spotType(spot) {
+        const n = spot.name;
+        const d = spot.description;
+        const txt = n + ' ' + d;
+        if (txt.includes('瀑布') || txt.includes('瀑布群')) return { icon: '💧', label: '瀑布' };
+        if (txt.includes('湖') || txt.includes('池') || txt.includes('潭')) return { icon: '🏞️', label: '湖泊' };
+        if (txt.includes('海') || txt.includes('海岸') || txt.includes('濕地') || txt.includes('燈塔')
+            || txt.includes('角') || txt.includes('鼻') || txt.includes('鼻頭')
+            || txt.includes('谷') || n.includes('和平島')) return { icon: '🌊', label: '海岸' };
+        if (txt.includes('茶園') || txt.includes('梯田')) return { icon: '🍃', label: '茶園' };
+        if (txt.includes('山') || txt.includes('峰') || txt.includes('嶺')
+            || txt.includes('岩') || txt.includes('崖') || txt.includes('岳')
+            || txt.includes('高地') || txt.includes('林')) return { icon: '🏔️', label: '山林' };
+        return { icon: '🏔️', label: '山林' };
+    }
+
+    function spotIcon(spot) {
+        const info = spotType(spot);
         return L.divIcon({
             className: 'custom-marker',
-            html: `<span>${icon}</span>`,
+            html: `<span>${info.icon}</span>`,
             iconSize: [30, 30],
             iconAnchor: [15, 15]
         });
@@ -274,12 +286,13 @@
         markers = [];
 
         data.forEach((spot, index) => {
-            const icon = spotIcon(spot.name);
+            const icon = spotIcon(spot);
             const marker = L.marker([spot.lat, spot.lng], { icon }).addTo(map);
 
+            const typeInfo = spotType(spot);
             const imgHtml = spot.image
                 ? `<img class="popup-img" src="${spot.image}" alt="${spot.name}" loading="lazy">`
-                : `<div class="popup-img-placeholder">🏔️</div>`;
+                : `<div class="popup-img-placeholder">${typeInfo.icon}</div>`;
 
             const popupHtml = `
                 ${imgHtml}
@@ -312,9 +325,10 @@
             const card = document.createElement('div');
             card.className = 'spot-card';
 
+            const typeInfo = spotType(spot);
             const imgHtml = spot.image
                 ? `<img class="spot-card-img" src="${spot.image}" alt="${spot.name}" loading="lazy">`
-                : `<div class="spot-card-img-placeholder">🏔️</div>`;
+                : `<div class="spot-card-img-placeholder">${typeInfo.icon}</div>`;
 
             card.innerHTML = `
                 ${imgHtml}
