@@ -240,7 +240,7 @@
         const isCoastal = name.includes('海') || name.includes('濕地') || name.includes('角') || name.includes('鼻頭');
         const isLake = name.includes('湖') || name.includes('池');
         const isMountain = name.includes('山') || name.includes('峰') || name.includes('嶺');
-        const icon = isWaterfall ? '💧' : isLake ? '🏞️' : isCoastal ? '🌊' : '🏔️';
+        const icon = hasWaterfall ? '💧' : isLake ? '🏞️' : isCoastal ? '🌊' : '🏔️';
         return L.divIcon({
             className: 'custom-marker',
             html: `<span>${icon}</span>`,
