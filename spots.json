@@ -7,9 +7,7 @@
     "source": "自然景點精選",
     "lat": 25.17,
     "lng": 121.5475,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Chihsingshan%2C_Tatun_volcanoes.jpg/960px-Chihsingshan%2C_Tatun_volcanoes.jpg",
-    "image_source": "Wikipedia: 七星山 (臺北市)"
+    "city": "台北市"
   },
   {
     "name": "夢幻湖",
@@ -19,9 +17,7 @@
     "source": "自然景點精選",
     "lat": 25.168,
     "lng": 121.5506,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Dream_lake1.jpg/960px-Dream_lake1.jpg",
-    "image_source": "Wikipedia: 夢幻湖"
+    "city": "台北市"
   },
   {
     "name": "擎天崗草原",
@@ -31,9 +27,7 @@
     "source": "自然景點精選",
     "lat": 25.1786,
     "lng": 121.5415,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/%E6%93%8E%E5%A4%A9%E5%B4%97%E5%A4%A7%E8%8D%89%E5%8E%9F.jpg/960px-%E6%93%8E%E5%A4%A9%E5%B4%97%E5%A4%A7%E8%8D%89%E5%8E%9F.jpg",
-    "image_source": "Wikipedia: 擎天崗"
+    "city": "台北市"
   },
   {
     "name": "象山親山步道",
@@ -43,9 +37,7 @@
     "source": "自然景點精選",
     "lat": 25.027,
     "lng": 121.5745,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2010_07_22210_6931_Xinyi_District%2C_Taipei%2C_Buildings_in_Taipei%2C_Taipei_101%2C_Streets_in_Taipei%2C_Taiwan.JPG/960px-2010_07_22210_6931_Xinyi_District%2C_Taipei%2C_Buildings_in_Taipei%2C_Taipei_101%2C_Streets_in_Taipei%2C_Taiwan.JPG",
-    "image_source": "Wikipedia: 象山 (臺北市)"
+    "city": "台北市"
   },
   {
     "name": "軍艦岩步道",
@@ -55,9 +47,7 @@
     "source": "自然景點精選",
     "lat": 25.121,
     "lng": 121.519,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/%E5%8C%97%E6%8A%95%E8%BB%8D%E8%89%A6%E5%B2%A9.jpg/960px-%E5%8C%97%E6%8A%95%E8%BB%8D%E8%89%A6%E5%B2%A9.jpg",
-    "image_source": "Wikipedia: 軍艦岩"
+    "city": "台北市"
   },
   {
     "name": "冷水坑步道",
@@ -67,9 +57,7 @@
     "source": "自然景點精選",
     "lat": 25.1755,
     "lng": 121.5378,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/%E9%99%BD%E6%98%8E%E5%B1%B1%E4%B8%AD%E6%B9%96%E5%82%99%E6%88%B0%E9%81%93%E8%B7%AF%E7%9C%BA%E6%9C%9B%E5%86%B7%E6%B0%B4%E5%9D%91.jpg/960px-%E9%99%BD%E6%98%8E%E5%B1%B1%E4%B8%AD%E6%B9%96%E5%82%99%E6%88%B0%E9%81%93%E8%B7%AF%E7%9C%BA%E6%9C%9B%E5%86%B7%E6%B0%B4%E5%9D%91.jpg",
-    "image_source": "Wikipedia: 冷水坑"
+    "city": "台北市"
   },
   {
     "name": "二子坪步道",
@@ -79,9 +67,7 @@
     "source": "自然景點精選",
     "lat": 25.1639,
     "lng": 121.5483,
-    "city": "台北市",
-    "image": "https://anise.tw/wp-content/uploads/2020/05/1588329769-fc07e63216295d22a82e910ac28e9035.jpg",
-    "image_source": "愛吃鬼芸芸 blog"
+    "city": "台北市"
   },
   {
     "name": "大崙頭山步道",
@@ -91,9 +77,7 @@
     "source": "自然景點精選",
     "lat": 25.116,
     "lng": 121.583,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Cemeteries_and_Pylons_at_Daluntou_Mountain%2C_Neihu_District_20120902.jpg/960px-Cemeteries_and_Pylons_at_Daluntou_Mountain%2C_Neihu_District_20120902.jpg",
-    "image_source": "Wikipedia: 大崙頭山"
+    "city": "台北市"
   },
   {
     "name": "無耳茶壺山",
@@ -103,9 +87,7 @@
     "source": "自然景點精選",
     "lat": 25.1095,
     "lng": 121.862,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/%E7%84%A1%E8%80%B3%E8%8C%B6%E5%A3%BA%E5%B1%B1DSC_4615.jpg/960px-%E7%84%A1%E8%80%B3%E8%8C%B6%E5%A3%BA%E5%B1%B1DSC_4615.jpg",
-    "image_source": "Wikipedia: 茶壺山"
+    "city": "新北市"
   },
   {
     "name": "鼻頭角步道",
@@ -115,9 +97,7 @@
     "source": "自然景點精選",
     "lat": 25.1288,
     "lng": 121.9233,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Military_radar_station_on_top_of_a_hill_seen_from_the_trail_in_Bitou_Cape_Park.jpg/960px-Military_radar_station_on_top_of_a_hill_seen_from_the_trail_in_Bitou_Cape_Park.jpg",
-    "image_source": "Wikipedia: 鼻頭角"
+    "city": "新北市"
   },
   {
     "name": "南子吝步道",
@@ -127,9 +107,7 @@
     "source": "自然景點精選",
     "lat": 25.1201,
     "lng": 121.8875,
-    "city": "新北市",
-    "image": "https://images.vocus.cc/941b7e2d-892c-42af-9b1b-c3cb3b90971a.jpg",
-    "image_source": "vocus 跟著Linko走走拍拍"
+    "city": "新北市"
   },
   {
     "name": "十分瀑布",
@@ -139,9 +117,7 @@
     "source": "自然景點精選",
     "lat": 25.0492,
     "lng": 121.7837,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Shifen_Waterfall_with_beautiful_emerald_water.jpg/960px-Shifen_Waterfall_with_beautiful_emerald_water.jpg",
-    "image_source": "Wikipedia: 十分瀑布"
+    "city": "新北市"
   },
   {
     "name": "桃源谷步道",
@@ -151,9 +127,7 @@
     "source": "自然景點精選",
     "lat": 24.9515,
     "lng": 121.9095,
-    "city": "新北市",
-    "image": "https://cdntwrunning.biji.co/83f15f81ccf0f30eb1c976a18d02c841.jpg",
-    "image_source": "Bing Images - 健行筆記"
+    "city": "新北市"
   },
   {
     "name": "三貂嶺瀑布群",
@@ -163,9 +137,7 @@
     "source": "自然景點精選",
     "lat": 25.0616,
     "lng": 121.8118,
-    "city": "新北市",
-    "image": "https://cold91.com/wp-content/uploads/2020/03/DJI_0196-1.jpg",
-    "image_source": "冷娃玩轉旅食 blog"
+    "city": "新北市"
   },
   {
     "name": "龍洞灣岬步道",
@@ -175,9 +147,7 @@
     "source": "自然景點精選",
     "lat": 25.12,
     "lng": 121.95,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Long_Tong_Coast_%28%E9%BE%8D%E6%B4%9E%E5%B2%AC%29_-_panoramio.jpg/960px-Long_Tong_Coast_%28%E9%BE%8D%E6%B4%9E%E5%B2%AC%29_-_panoramio.jpg",
-    "image_source": "Wikipedia: 龍洞 (台灣)"
+    "city": "新北市"
   },
   {
     "name": "孝子山",
@@ -187,9 +157,7 @@
     "source": "自然景點精選",
     "lat": 25.05,
     "lng": 121.75,
-    "city": "新北市",
-    "image": "https://i0.wp.com/journey.tw/wp-content/uploads/20200502210708_79.jpg?w=1100&quality=99&ssl=1",
-    "image_source": "許傑,旅行圖中 blog"
+    "city": "新北市"
   },
   {
     "name": "滿月圓瀑布",
@@ -199,9 +167,7 @@
     "source": "自然景點精選",
     "lat": 24.87,
     "lng": 121.475,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/%E6%BB%BF%E6%9C%88%E5%9C%93%E6%A3%AE%E6%9E%97%E9%81%8A%E6%A8%82%E5%8D%80_Manyueyuan_Forest_Recreation_Area_-_panoramio_%282%29.jpg/960px-%E6%BB%BF%E6%9C%88%E5%9C%93%E6%A3%AE%E6%9E%97%E9%81%8A%E6%A8%82%E5%8D%80_Manyueyuan_Forest_Recreation_Area_-_panoramio_%282%29.jpg",
-    "image_source": "Wikipedia: 滿月圓國家森林遊樂區"
+    "city": "新北市"
   },
   {
     "name": "青山瀑布",
@@ -211,9 +177,7 @@
     "source": "自然景點精選",
     "lat": 25.2471,
     "lng": 121.5588,
-    "city": "新北市",
-    "image": "https://cdntwrunning.biji.co/12dd74a7fc8db5541ef21f8d85a9efae.jpg",
-    "image_source": "Bing Images - 健行筆記"
+    "city": "新北市"
   },
   {
     "name": "燦光寮山",
@@ -223,9 +187,7 @@
     "source": "自然景點精選",
     "lat": 25.093,
     "lng": 121.8656,
-    "city": "新北市",
-    "image": "https://jamesdiscover.tw/wp-content/uploads/2025/10/883a85d81b278074e265b4c63cb0fe8e.jpeg",
-    "image_source": "若曦的味旅人生 blog"
+    "city": "新北市"
   },
   {
     "name": "富貴角燈塔步道",
@@ -235,9 +197,7 @@
     "source": "自然景點精選",
     "lat": 25.298,
     "lng": 121.537,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Fugueijiao_Lighthouse_1.jpg",
-    "image_source": "Wikipedia: 富貴角燈塔"
+    "city": "新北市"
   },
   {
     "name": "抹茶山(聖母登山步道)",
@@ -247,9 +207,7 @@
     "source": "自然景點精選",
     "lat": 24.828,
     "lng": 121.738,
-    "city": "宜蘭縣",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Big_white_cloud_over_Mt._Sanjiaolun_in_the_morning_on_4_June_2020.jpg/960px-Big_white_cloud_over_Mt._Sanjiaolun_in_the_morning_on_4_June_2020.jpg",
-    "image_source": "Wikipedia: 三角崙山"
+    "city": "宜蘭縣"
   },
   {
     "name": "太平山翠峰湖",
@@ -259,9 +217,7 @@
     "source": "自然景點精選",
     "lat": 24.7218,
     "lng": 121.1455,
-    "city": "宜蘭縣",
-    "image": "http://pic.pimg.tw/rose286866/1380366655-2084271479.jpg",
-    "image_source": "rose286866 pixnet blog"
+    "city": "宜蘭縣"
   },
   {
     "name": "見晴懷古步道",
@@ -271,9 +227,7 @@
     "source": "自然景點精選",
     "lat": 24.715,
     "lng": 121.148,
-    "city": "宜蘭縣",
-    "image": "https://g.udn.com.tw/upfiles/B_AA/AAC3343/PSN_PHOTO/132/f_23203132_1.jpg",
-    "image_source": "趴趴走的竹子 udn blog"
+    "city": "宜蘭縣"
   },
   {
     "name": "五峰旗瀑布",
@@ -283,9 +237,7 @@
     "source": "自然景點精選",
     "lat": 24.8285,
     "lng": 121.742,
-    "city": "宜蘭縣",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wufongci_falls_middle.JPG/960px-Wufongci_falls_middle.JPG",
-    "image_source": "Wikipedia: 五峰旗瀑布"
+    "city": "宜蘭縣"
   },
   {
     "name": "粉鳥林神秘海灘",
@@ -295,9 +247,7 @@
     "source": "自然景點精選",
     "lat": 24.53,
     "lng": 121.84,
-    "city": "宜蘭縣",
-    "image": "https://margaret.tw/wp-content/uploads/pixnet/1350541510-254554284.jpg",
-    "image_source": "瑪格。圖寫生活 blog"
+    "city": "宜蘭縣"
   },
   {
     "name": "拉拉山巨木群步道",
@@ -307,9 +257,7 @@
     "source": "自然景點精選",
     "lat": 24.7414,
     "lng": 121.1475,
-    "city": "桃園市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/La_La_Mountain_%E6%8B%89%E6%8B%89%E5%B1%B1_-_panoramio_%281%29.jpg/960px-La_La_Mountain_%E6%8B%89%E6%8B%89%E5%B1%B1_-_panoramio_%281%29.jpg",
-    "image_source": "Wikipedia: 拉拉山"
+    "city": "桃園市"
   },
   {
     "name": "小烏來瀑布",
@@ -319,9 +267,7 @@
     "source": "自然景點精選",
     "lat": 24.7215,
     "lng": 121.1123,
-    "city": "桃園市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/%E5%B0%8F%E7%83%8F%E4%BE%86%E7%80%91%E5%B8%83.JPG",
-    "image_source": "Wikipedia: 小烏來瀑布"
+    "city": "桃園市"
   },
   {
     "name": "東眼山國家森林遊樂區",
@@ -331,9 +277,7 @@
     "source": "自然景點精選",
     "lat": 24.7182,
     "lng": 121.1534,
-    "city": "桃園市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Dong-Yan-Shan_National_Forest_Recreational_Area.jpg/960px-Dong-Yan-Shan_National_Forest_Recreational_Area.jpg",
-    "image_source": "Wikipedia: 東眼山國家森林遊樂區"
+    "city": "桃園市"
   },
   {
     "name": "火炎山",
@@ -343,9 +287,7 @@
     "source": "自然景點精選",
     "lat": 24.3543,
     "lng": 120.7388,
-    "city": "苗栗縣",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/17750Huoyan_Mountain_Chiu_Tai_Wei_01.jpg/960px-17750Huoyan_Mountain_Chiu_Tai_Wei_01.jpg",
-    "image_source": "Wikipedia: 火炎山 (苗栗縣)"
+    "city": "苗栗縣"
   },
   {
     "name": "高美濕地",
@@ -355,9 +297,7 @@
     "source": "自然景點精選",
     "lat": 24.311,
     "lng": 120.551,
-    "city": "台中市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/%E5%8F%B0%E4%B8%AD%E9%AB%98%E7%BE%8E%E6%BF%95%E5%9C%B0.jpg/960px-%E5%8F%B0%E4%B8%AD%E9%AB%98%E7%BE%8E%E6%BF%95%E5%9C%B0.jpg",
-    "image_source": "Wikipedia: 高美野生動物保護區"
+    "city": "台中市"
   },
   {
     "name": "金面山剪刀石",
@@ -367,9 +307,7 @@
     "source": "自然景點精選",
     "lat": 25.085,
     "lng": 121.565,
-    "city": "台北市",
-    "image": "https://leofunlife.com/wp-content/uploads/2019/09/金面山10-768x1024.jpg",
-    "image_source": "Bing Images - leofunlife.com"
+    "city": "台北市"
   },
   {
     "name": "劍潭山北眼平台",
@@ -379,9 +317,7 @@
     "source": "自然景點精選",
     "lat": 25.086,
     "lng": 121.527,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Chientan_Mountain_and_Dajia_Riverside_Park.jpg/960px-Chientan_Mountain_and_Dajia_Riverside_Park.jpg",
-    "image_source": "Wikipedia: 劍潭山"
+    "city": "台北市"
   },
   {
     "name": "虎山親山步道",
@@ -391,9 +327,7 @@
     "source": "自然景點精選",
     "lat": 25.028,
     "lng": 121.581,
-    "city": "台北市",
-    "image": "https://cdntwrunning.biji.co/1024_fe7d9b64ac34dd9a278aeada25063289.jpg",
-    "image_source": "Bing Images - 健行筆記"
+    "city": "台北市"
   },
   {
     "name": "絹絲瀑布步道",
@@ -403,9 +337,7 @@
     "source": "自然景點精選",
     "lat": 25.168,
     "lng": 121.56,
-    "city": "台北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Yangmingshan_080320_13.jpg",
-    "image_source": "Wikipedia: 絹絲瀑布"
+    "city": "台北市"
   },
   {
     "name": "碧山露營場天空步道",
@@ -415,9 +347,7 @@
     "source": "自然景點精選",
     "lat": 25.108,
     "lng": 121.578,
-    "city": "台北市",
-    "image": "https://cdn.walkerland.com.tw/images/upload/article/2023/04/m19855/014db7734d25b758bd17758292e6ff621cee4d7f.jpg",
-    "image_source": "Bing Images - Bernice的隨手筆記"
+    "city": "台北市"
   },
   {
     "name": "報時山步道",
@@ -427,9 +357,7 @@
     "source": "自然景點精選",
     "lat": 25.109,
     "lng": 121.855,
-    "city": "新北市",
-    "image": "https://cdntwrunning.biji.co/53d12b4b34139aaa42170b3b15e8afa4.jpg",
-    "image_source": "Bing Images - 健行筆記"
+    "city": "新北市"
   },
   {
     "name": "鱷魚島觀景平台",
@@ -439,9 +367,7 @@
     "source": "自然景點精選",
     "lat": 24.947,
     "lng": 121.618,
-    "city": "新北市",
-    "image": "https://cdntwrunning.biji.co/0e5844a368c0f78ef7c3f0eee443892f.jpg",
-    "image_source": "Bing Images - 健行筆記"
+    "city": "新北市"
   },
   {
     "name": "姜子寮絕壁步道",
@@ -451,9 +377,7 @@
     "source": "自然景點精選",
     "lat": 25.045,
     "lng": 121.66,
-    "city": "新北市",
-    "image": "https://anise.tw/wp-content/uploads/2020/05/1588816683-8e79b64bc15524cf334d13f75607f03d.jpg",
-    "image_source": "愛吃鬼芸芸 blog"
+    "city": "新北市"
   },
   {
     "name": "茶山步道",
@@ -463,9 +387,7 @@
     "source": "自然景點精選",
     "lat": 25.28,
     "lng": 121.56,
-    "city": "新北市",
-    "image": "https://cdntwrunning.biji.co/0030827404e495a89256677b0f7756c3.jpg",
-    "image_source": "Bing Images - 健行筆記"
+    "city": "新北市"
   },
   {
     "name": "金瓜石地質公園",
@@ -475,9 +397,7 @@
     "source": "自然景點精選",
     "lat": 25.108,
     "lng": 121.858,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Views_from_Cyuanji_Temple-02.2023-09-20.jpg/960px-Views_from_Cyuanji_Temple-02.2023-09-20.jpg",
-    "image_source": "Wikipedia: 金瓜石"
+    "city": "新北市"
   },
   {
     "name": "內洞國家森林遊樂區",
@@ -487,9 +407,7 @@
     "source": "自然景點精選",
     "lat": 24.825,
     "lng": 121.53,
-    "city": "新北市",
-    "image": "https://d3lmzovk8vyr42.cloudfront.net/local_tour/169139789964d0af0b02cf2.jpg?width=1440&format=jpeg",
-    "image_source": "Bing Images - 奧丁丁體驗"
+    "city": "新北市"
   },
   {
     "name": "五分山步道",
@@ -499,9 +417,7 @@
     "source": "自然景點精選",
     "lat": 25.065,
     "lng": 121.785,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/2024_Wufen_Mountain_in_New_Taipei%2C_Taiwan_a.jpg/960px-2024_Wufen_Mountain_in_New_Taipei%2C_Taiwan_a.jpg",
-    "image_source": "Wikipedia: 五分山"
+    "city": "新北市"
   },
   {
     "name": "草嶺古道",
@@ -511,9 +427,7 @@
     "source": "自然景點精選",
     "lat": 24.985,
     "lng": 121.92,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/%E8%8D%89%E5%B6%BA%E5%8F%A4%E9%81%93%E8%88%87%E8%8D%89%E5%B6%BA%E8%99%8E%E5%AD%97%E7%A2%91.jpg/960px-%E8%8D%89%E5%B6%BA%E5%8F%A4%E9%81%93%E8%88%87%E8%8D%89%E5%B6%BA%E8%99%8E%E5%AD%97%E7%A2%91.jpg",
-    "image_source": "Wikipedia: 草嶺古道"
+    "city": "新北市"
   },
   {
     "name": "三貂角燈塔步道",
@@ -523,9 +437,7 @@
     "source": "自然景點精選",
     "lat": 25.0075,
     "lng": 122.001,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/2018_Christmasland_in_New_Taipei%2C_Taiwan.jpg/960px-2018_Christmasland_in_New_Taipei%2C_Taiwan.jpg",
-    "image_source": "Wikipedia: 新北市"
+    "city": "新北市"
   },
   {
     "name": "金瓜寮魚蕨步道",
@@ -535,9 +447,7 @@
     "source": "自然景點精選",
     "lat": 24.92,
     "lng": 121.7,
-    "city": "新北市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/%E9%87%91%E7%93%9C%E5%AF%AE%E6%BA%AA%E4%B8%8A%E6%B8%B8.jpg/960px-%E9%87%91%E7%93%9C%E5%AF%AE%E6%BA%AA%E4%B8%8A%E6%B8%B8.jpg",
-    "image_source": "Wikipedia: 金瓜寮溪"
+    "city": "新北市"
   },
   {
     "name": "和平島公園",
@@ -547,9 +457,7 @@
     "source": "自然景點精選",
     "lat": 25.153,
     "lng": 121.773,
-    "city": "基隆市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/2022_Hoping_Island_Keelung_TAIWAN_ii.jpg/960px-2022_Hoping_Island_Keelung_TAIWAN_ii.jpg",
-    "image_source": "Wikipedia: 和平島"
+    "city": "基隆市"
   },
   {
     "name": "望幽谷",
@@ -559,9 +467,7 @@
     "source": "自然景點精選",
     "lat": 25.141,
     "lng": 121.792,
-    "city": "基隆市",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Superstar_Aquarius_and_Keelung_Cultural_Center_at_night_20181106.jpg/960px-Superstar_Aquarius_and_Keelung_Cultural_Center_at_night_20181106.jpg",
-    "image_source": "Wikipedia: 中正區 (基隆市)"
+    "city": "基隆市"
   },
   {
     "name": "明池國家森林遊樂區",
@@ -571,9 +477,7 @@
     "source": "自然景點精選",
     "lat": 24.645,
     "lng": 121.47,
-    "city": "宜蘭縣",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Tourist_group_at_Mingchi.jpg/960px-Tourist_group_at_Mingchi.jpg",
-    "image_source": "Wikipedia: 明池國家森林遊樂區"
+    "city": "宜蘭縣"
   },
   {
     "name": "松羅國家步道",
@@ -583,9 +487,7 @@
     "source": "自然景點精選",
     "lat": 24.68,
     "lng": 121.6,
-    "city": "宜蘭縣",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/%E5%86%AC%E5%B1%B1%E6%B2%B3_%E5%88%A9%E6%BE%A4%E7%B0%A1%E6%A9%8B_DJI-0162_%28cropped%29.jpg/960px-%E5%86%AC%E5%B1%B1%E6%B2%B3_%E5%88%A9%E6%BE%A4%E7%B0%A1%E6%A9%8B_DJI-0162_%28cropped%29.jpg",
-    "image_source": "Wikipedia: 宜蘭縣"
+    "city": "宜蘭縣"
   },
   {
     "name": "馬那邦山",
@@ -595,8 +497,6 @@
     "source": "自然景點精選",
     "lat": 24.38,
     "lng": 120.87,
-    "city": "苗栗縣",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/%E9%A6%AC%E9%82%A3%E9%82%A6%E5%B1%B1%E5%B1%B1%E9%A0%822017.jpg/960px-%E9%A6%AC%E9%82%A3%E9%82%A6%E5%B1%B1%E5%B1%B1%E9%A0%822017.jpg",
-    "image_source": "Wikipedia: 馬那邦山"
+    "city": "苗栗縣"
   }
 ]
