@@ -223,7 +223,7 @@
         }).addTo(map);
 
         try {
-            const response = await fetch('spots.json');
+            const response = await fetch('spots.json?v=' + Date.now());
             spots = await response.json();
         } catch (e) {
             console.error("Failed to load spots.json", e);
